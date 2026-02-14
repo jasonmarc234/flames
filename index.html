@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FLAMES</h1>
+        <p class="subtitle">Discover your relationship destiny!</p>
+
+        <div class="input-group">
+            <label for="name1">First Name</label>
+            <input type="text" id="name1" placeholder="Enter first name">
+        </div>
+
+        <div class="input-group">
+            <label for="name2">Second Name</label>
+            <input type="text" id="name2" placeholder="Enter second name">
+        </div>
+
+        <button class="btn-pair" onclick="playFlames()">Pair</button>
+        
+        <p class="error-message" id="errorMsg">Please enter both names!</p>
+
+        <div class="flames-display">
+            <span class="flame-letter" id="f">F</span>
+            <span class="flame-letter" id="l">L</span>
+            <span class="flame-letter" id="a">A</span>
+            <span class="flame-letter" id="m">M</span>
+            <span class="flame-letter" id="e">E</span>
+            <span class="flame-letter" id="s">S</span>
+        </div>
+
+        <div class="result-popup" id="resultPopup">
+            <h2 id="resultLetter"></h2>
+            <p id="resultMeaning"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

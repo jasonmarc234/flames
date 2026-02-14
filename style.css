@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A10100 0%, #DA1F05 16%, #F33C04 33%, #FE650D 50%, #FFC11F 66%, #FFF75D 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #A10100;
+    font-size: 3em;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #FE650D;
+}
+
+.btn-pair {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #A10100 0%, #DA1F05 25%, #F33C04 50%, #FE650D 75%, #FFC11F 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-pair:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(254, 101, 13, 0.5);
+}
+
+.btn-pair:active {
+    transform: translateY(0);
+}
+
+.flames-display {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.flame-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ccc;
+    transition: all 0.5s;
+    cursor: default;
+}
+
+.flame-letter.highlight {
+    color: #DA1F05;
+    transform: scale(1.5);
+    text-shadow: 0 0 20px rgba(218, 31, 5, 0.6);
+}
+
+.result-popup {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #A10100 0%, #DA1F05 33%, #F33C04 66%, #FE650D 100%);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    animation: slideDown 0.5s ease-out;
+}
+
+.result-popup.show {
+    display: block;
+}
+
+.result-popup h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.result-popup p {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-message {
+    color: #DA1F05;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
